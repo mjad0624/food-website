@@ -209,7 +209,7 @@ font-size: 1em;
 
 /****************** MEDIA QUERIES *******************/
 
-@media (min-width:501px){
+@media (min-width:601px){
     .about_me{
         display: grid;
         grid-template-columns:2fr 3fr;
@@ -234,7 +234,7 @@ font-size: 1em;
     }
 }
 
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: 600px){
     .panels{
         margin-bottom: 15rem;
     }
