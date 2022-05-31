@@ -1,0 +1,291 @@
+/******************* VARIABLES ********************/
+:root{
+    --paragraph: font-size: 10px;
+    --animation_effects: 90vw;
+}
+/************* GENERAL STYLES *************/
+body{
+    margin: 0 7%;
+    padding: 0;
+    background-color: #1E1E1E;
+    font-family: 'Amatic SC', cursive;
+    color: #fff;
+
+}
+
+body h1, h2{
+    font-family: 'PT Sans', sans-serif;
+    text-shadow: 1px 2px #fff;
+}
+
+body p{
+    font-weight: 400;
+    font-size: 3em;
+}
+
+body a{
+    font-weight: 400;
+    font-size: 3em;
+}
+
+.panels{
+    margin-bottom: 20rem;
+}
+
+/******************* SPECEFIC/CONTAINER STYLES *****************/
+.nav_container{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content:space-around;
+    margin-top: 1em;
+    font-size: 10px;
+    position: fixed;
+    z-index: 1;
+    color: #757575;
+
+}
+
+.nav_container a{
+    text-decoration: none;
+    color: inherit;
+}
+.nav_container :hover{
+  color: #fff;
+  font-weight: bolder;
+}
+
+
+.intro-item-1{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0;
+    font-size: 11px;
+    position: relative;
+}
+
+.intro-item-2{
+    background-color: yellow;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+}
+
+
+.intro h1{
+    font-size: 9em;
+}
+.intro span{
+    font-size: 3em;
+    color: yellow;
+}
+
+.title{
+    color: yellow;
+    font-size: 5em;
+    
+
+}
+
+
+.personal_statement{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    font-size: 10px;
+    position: relative;
+    
+    
+    
+}
+
+
+.about_me{
+    position: relative;
+    font-size: 10px; 
+}
+
+.certificates{
+    font-size: 10px; 
+    position: relative;
+    
+}
+.skills{
+    font-size: 10px; 
+    position: relative;
+    
+}
+
+.logo_container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    font-size: 11px;
+    row-gap: 2em;
+    column-gap: 2em;
+    text-align: center;
+}
+
+.logo_container img{
+
+    padding: 2em 2em;
+    text-align: center;
+}
+
+.logo_container img{
+    width: 7em;
+}
+
+
+
+.end_statement{
+    font-size: 10px; 
+}
+
+
+
+.footer_container{
+display: grid;
+width: 100%;
+grid-template-columns: 1fr 3fr 1fr;
+font-size:5px;
+margin-bottom: 2em;
+}
+
+.footer_container div:nth-child(2){
+display: grid;
+grid-template-columns: 1fr 1fr;
+border-top: solid 1px .212121 ;
+text-align: center;
+font-size: 1em;
+
+}
+
+.footer_container p{
+    margin: 0;
+}
+
+.end_statement h1{
+    font-size: 6em;
+}
+
+/****************** ANIMATIONS *********************/
+/***************** BEFORE ANIMATION ***************/
+.animate{
+    left: 90vw;
+    transition: ease 1s;
+}
+
+.fade_up{
+    opacity: 0;
+    transition: ease .5s;
+    position: relative;
+    top: -50px;
+}
+
+.matrix:hover{
+    font-weight: bold;
+    color: yellow;
+}
+/****************** ANIMATION EFFECTS**************/
+
+
+
+.slide{
+    left: 0vw;
+ 
+
+}
+
+.fade{
+    opacity: 1;
+    top: 0px;
+    color: #fff;
+}
+
+
+
+/****************** MEDIA QUERIES *******************/
+
+@media (min-width:501px){
+    .about_me{
+        display: grid;
+        grid-template-columns:2fr 3fr;
+        grid-gap: 10%;
+        width: 90%;
+    }
+    #mypic img{
+        width: 100%;
+        height: 750px;
+        transition: ease 2s ;
+        /* visibility: hidden; */
+    }
+    .image_fade{
+        width: 100% !important; 
+        height: 750px !important;
+        visibility: visible !important;
+    }
+    
+    .skills{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .panels{
+        margin-bottom: 15rem;
+    }
+
+    #nav_container{
+        font-size: 7px;
+    }
+    
+    .about_me{
+        width: 100%;
+        font-size: 7px;
+    }
+
+  
+    #mypic img{
+        width: 100%;
+        height: 400px;
+        text-align: center;
+
+    }
+
+   
+    .intro-item-1{
+        font-size: 5px;
+    }
+
+    
+    .personal_statement{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    font-size: 7px;
+    }
+
+    .certificates{
+        font-size: 7px; 
+    }
+    .skills{
+        font-size: 7px; 
+    }
+    
+    .end_statement{
+        font-size: 6px; 
+    }
+
+    .end_statement h1{
+        font-size: 4em;
+    }
+
+    .footer_container div:nth-child(2){
+        font-size: 5px;
+    }
+}
+  
