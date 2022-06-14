@@ -2,20 +2,29 @@
 :root{
     --paragraph: font-size: 10px;
     --animation_effects: 90vw;
+    --background: #010101;
+    --text: #fafafa;
+    --header:#febd59;
+    --highlights:aqua;
 }
 /************* GENERAL STYLES *************/
+html {
+    scroll-behavior: smooth;
+  }
+
 body{
-    margin: 0 7%;
+    margin-left: 5%;
+    margin-right: 5%;
     padding: 0;
-    background-color: #1E1E1E;
-    font-family: 'Amatic SC', cursive;
-    color: #fff;
+    background-color: var(--background);
+    font-family: 'Work Sans', sans-serif;
+    color: var(--text);
 
 }
 
 body h1, h2{
     font-family: 'PT Sans', sans-serif;
-    text-shadow: 1px 2px #fff;
+    /* text-shadow: 1px 2px #fff; */
 }
 
 body p{
@@ -26,11 +35,55 @@ body p{
 body a{
     font-weight: 400;
     font-size: 3em;
+    text-decoration: none;
+    color: var(--text);
+    position: relative;
+}
+
+body a:hover{    
+    color: var(--highlights);
+    font-weight: bolder;      
+}
+a::before{
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 1px;
+    background-color: var(--highlights);
+    bottom: 0;
+    transition: 1s ease-in;
+}
+ a:hover::before{
+    width: 100%;
+    color:fff;
+
 }
 
 .panels{
     margin-bottom: 20rem;
 }
+
+figure{
+    overflow: hidden;
+    height: inherit;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+img{
+    position: relative;
+    height: inherit;
+    width: inherit;
+    transition: 1s ease-in-out;
+    object-fit: cover;
+}
+
+
+img:hover{
+transform: scale(1.1);
+cursor: pointer;
+}
+
 
 /******************* SPECEFIC/CONTAINER STYLES *****************/
 .nav_container{
@@ -40,7 +93,7 @@ body a{
     flex-direction: row;
     justify-content:space-around;
     margin-top: 1em;
-    font-size: 10px;
+    font-size: 8px;
     position: fixed;
     z-index: 1;
     color: #757575;
@@ -48,13 +101,9 @@ body a{
 }
 
 .nav_container a{
-    text-decoration: none;
     color: inherit;
 }
-.nav_container :hover{
-  color: #fff;
-  font-weight: bolder;
-}
+
 
 
 .intro-item-1{
@@ -66,13 +115,6 @@ body a{
     position: relative;
 }
 
-.intro-item-2{
-    background-color: yellow;
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    border-radius: 50px;
-}
 
 
 .intro h1{
@@ -80,11 +122,11 @@ body a{
 }
 .intro span{
     font-size: 3em;
-    color: yellow;
+    color: var(--header);
 }
 
 .title{
-    color: yellow;
+    color: var(--header);
     font-size: 5em;
     
 
@@ -95,26 +137,85 @@ body a{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     text-align: center;
-    font-size: 10px;
+    font-size: 8px;
     position: relative;
-    
-    
-    
+
 }
 
 
 .about_me{
     position: relative;
-    font-size: 10px; 
+    font-size: 8px; 
+}
+.projects{
+    font-size: 8px; 
+    position: relative;  
 }
 
-.certificates{
-    font-size: 10px; 
-    position: relative;
+.project_container{
+    width: 100%;
+    font-size: 8px;
+    margin-bottom: 20%;
+
+}
+.project_container h1{
+font-size: 3em;
+}
+.project_container div{
+    height: 90vh;
     
 }
+
+.project_container:nth-child(even) .project_img{
+    background-color: #a8ecf9;
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+    color: #fff;
+
+
+}
+.project_container:nth-child(odd) .project_img{
+    background-color: #a8ecf9;
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+    color: #fff;
+    
+}
+
+
+.project_container:nth-child(odd){
+    direction: rtl;
+}
+
+.project_container:nth-child(odd) a::before{
+    right: 52%
+}
+
+.project_img img{
+    transition: ease 2s ;
+}
+.project_description{
+    text-align: center;
+    height: 100%;
+    padding: 0 10%; 
+    /* background-color: red; */
+}
+.certificates{
+    font-size: 6px; 
+    position: relative;
+      
+}
+
+
+.certificates a{
+margin: 10em 0;
+position: relative;
+line-height: 2em;
+}
+
+
 .skills{
-    font-size: 10px; 
+    font-size: 8px; 
     position: relative;
     
 }
@@ -141,7 +242,7 @@ body a{
 
 
 .end_statement{
-    font-size: 10px; 
+    font-size: 8px; 
 }
 
 
@@ -185,9 +286,20 @@ font-size: 1em;
     top: -50px;
 }
 
+.simul_fade{
+    opacity: 0;
+    transition: ease .5s;
+    position: relative;
+    top: -50px;
+}
+
+.matrix{
+    transition: 1s ease;
+}
 .matrix:hover{
-    font-weight: bold;
-    color: yellow;
+    
+    color: var(--highlights);
+    transition: 1s ease;
 }
 /****************** ANIMATION EFFECTS**************/
 
@@ -202,14 +314,23 @@ font-size: 1em;
 .fade{
     opacity: 1;
     top: 0px;
-    color: #fff;
+    color: var(--text);
 }
 
+.hover_effects{
+    color: var();
+}
 
 
 /****************** MEDIA QUERIES *******************/
 
-@media (min-width:801px){
+
+@media (min-width:426px){
+    .project_container{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+
     .about_me{
         display: grid;
         grid-template-columns:2fr 3fr;
@@ -222,19 +343,14 @@ font-size: 1em;
         transition: ease 2s ;
         /* visibility: hidden; */
     }
-    .image_fade{
-        width: 100% !important; 
-        height: 750px !important;
-        visibility: visible !important;
-    }
-    
+ 
     .skills{
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
 }
 
-@media only screen and (max-width: 800px){
+@media (max-width: 425px){
     .panels{
         margin-bottom: 15rem;
     }
@@ -261,17 +377,22 @@ font-size: 1em;
         font-size: 5px;
     }
 
-    
     .personal_statement{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     text-align: center;
     font-size: 7px;
     }
-
+    .projects{
+        font-size: 7px; 
+    }
+    .project_container div{
+        height: 40vh;
+    }
     .certificates{
         font-size: 7px; 
     }
+
     .skills{
         font-size: 7px; 
     }

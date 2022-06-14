@@ -26,6 +26,19 @@
         
     })
 
+    // const matrix_links = document.querySelectorAll('a');
+
+    // matrix_links.forEach(cb =>{
+    //     var content_links = cb.textContent.split(' ');
+    //     cb.textContent = "";
+        
+    //     content_links.forEach(obj =>{
+    //         cb.innerHTML += "<span class = 'matrix fade_up'>" + obj + " </span>";
+            
+    //     });
+        
+    // })
+
 
 
 
@@ -68,7 +81,7 @@
                 intersectionObserver_fade.unobserve(entry.target);
             }
 
-            if(timer_fade === 3000){
+            if(timer_fade === 1500){
             timer_fade = 0;
             }
         })
@@ -81,8 +94,26 @@
         intersectionObserver_fade.observe(obj); 
     });
 
+/********************************FADE-UP WITH NO DELAY**************************/
+let style_simul_fade = "fade";       //css class styling
+let timer_simul_fade = 100;
+let intersectionObserver_simul_fade = new IntersectionObserver(entries =>{
+    entries.forEach(entry =>{
+        if(entry.isIntersecting){
+            setTimeout(function() {entry.target.classList.add(style_simul_fade)},timer_simul_fade);
+            intersectionObserver_simul_fade.unobserve(entry.target);
+        }
 
+    })
+    
+},options = {
+    threshold: 0.8
+}); 
 
+document.querySelectorAll('.simul_fade').forEach(obj => {
+    intersectionObserver_simul_fade.observe(obj); 
+});
+        
     /*********************  NAV BAR OBSERVER **********************/
 
     let nav_observer = document.querySelector('.intro');
@@ -95,3 +126,5 @@
     obeserver_nav.observe(nav_observer); 
 
 };
+
+/****************************** Image Slider ********************************/
