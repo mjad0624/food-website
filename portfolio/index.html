@@ -1,20 +1,24 @@
 <!DOCTYPE html>
+<html>
 <head>
     <title>Portfolio Website</title>
-    <meta>
     <link href="css/css-main.css" rel="stylesheet" type="text/css" media="screen">
+    <meta charset="utf-8">
+    <meta name= "viewport" content= "width=device-width, initial-scale=1">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    
+   
+   
 </head>
 <header class = "header show-show-scroll">
     <nav>
         <div class="nav_container" id="nav_container" >
-                <div class="item-1 "><a href="#introduction">ME</a></div>
-                <div class="item-2 "><a href="portfolio-website.html">MY PROJECT</a></div>
-                <div class="item-3 "><a href="#contact_me">CONTACT ME</a></div>
+            <div class="item-1 "><a href="#introduction">ME</a></div>
+            <div class="item-2 "><a href="#projects">MY PROJECT</a></div>
+            <div class="item-3 "><a href="#contact_me">CONTACT ME</a></div>
         </div>
     </nav>
 </header>
@@ -25,7 +29,6 @@
 <body>
     <div class="container">
 
-        <div class="loader">&nbsp;</div>
     <div class="panels intro fade_up" id="introduction">
         <div class="intro-item intro-item-1" >
             <h1><span>Hi</span>, I am</h1><h1 class="element"></h1>
@@ -33,85 +36,162 @@
                 <script>
                 
                 var options = {
-                    strings: [' Michael^1000 John D^60avid.', ' a Web Developer.'],
+                    strings: [' a Web Developer.', ' Michael^1000 John D^60avid.'],
                     typeSpeed: 50,
                     backSpeed:50,
                     loop: true,
-                    loopCount: Infinity,
+                    loopCount: 3,
                     showCursor:false
                 };
 
                 var typed = new Typed('.element', options);
-            </script>
-              
+</script>
         </div>
-
         <!-- <div class="intro-item-2">&nbsp;</div> -->
-     
     </div>
-    <div class="panels animate personal_statement"  >
+
+    <div class="panels  personal_statement"  >
         <div></div>
-        <div class="animate">
+        <div class="">
             <p id = "matrix" class = "paragraph">Fresh graduate from Don Honorio State University with a Degree of Bachelor of Science in Information Technology. Ready and excited to embark the journey on the working industry.</p>
         </div>
         <div></div>
     </div>
-    <div class="panels animate about_me" >
+
+    <div class="panels  about_me" >
         <div>
             <h2 class="title">About Me</h2>
             <p>Adventurous, Polish, Silent</p>
-            <p>I am a timid person trying to expand my horizons. I enjoy creating and experimenting different styles and patterns on my work, hence making my work a reflection of myself and my clients. </p>            
+            <p>I am a timid person trying to expand my horizons. I enjoy creating and experimenting different styles and patterns on
+                my works, hence making my work a reflection of myself.</p>
         </div>
         
         <div id="mypic">
-            <img src="images/profile_pic.jpg" alt="Profile pic" class="fade_up">
+            <figure>
+                <img src="images/profile_pic.jpg" alt="Profile pic" class="fade_up zoom_in">
+            </figure>
+        </div>
+    </div>
+
+    <div class="panels projects">
+        <h2 class="title ">Personal Projects</h2>
+        <div class="project_container">
+    
+            <div class="project_img">
+         
+                <figure>
+                    <img src="images/food_website_cover.png" class="fade_up zoom_in" alt="image">
+                </figure>
+
+            </div>
+            <div class="project_description">
+                <h1>Food Nutrition Website</h1>
+                    <h2>2021</h2>
+             
+                             
+                    <p>Simple food website that displays the nutrition facts of a particular food searched. Was made to test my knowledge in implementing APIs.</p>
+              <a href="https://mjad0624.github.io/food_website/" target="_blank"><b>Visit Site</b></a>
+            
+            </div>
         </div>
 
-    </div>
-    <div class="panels certificates" >
-        <h2 class="title animate">Certificates/Webinars Attended</h2>
+        <div class="project_container">
+    
+            <div class="project_img">
+         
+                <figure>
+                    <img src="images/thesis_system_pic_2.png" class="fade_up zoom_in" alt="image">
+                </figure>
+
+            </div>
+            <div class="project_description">
+                <h1>Business Monitoring System</h1>
+                    <h2>2022</h2>
+
+                <p>A system that tracks, monitor, notify business regarding their paper requirements at bacolor municipality. Made as our final thesis project</p>
+              <a href="#" target="_blank"><b>Visit Repository</b></a>
+            
+            </div>
+        </div>
+        
+        <div class="project_container" id="projects">
+        
+            <div class="project_img">
+                <figure>
+                    <img src="images/wordpress_pic_2.png" class="fade_up zoom_in" alt="image">
+                </figure>
+            </div>
+            <div class="project_description">
+                <h1>Single Paged Wordpress site</h1>
+                
+                    <h2>2021</h2>
+        
+              <p>A single paged Wordpress site. Made to test my knowloedge after taking a online Wordpress course</p>
+            <a href="#"><b>Visit Site</b></a>
+            </div>
+        </div>
+        </div>
+        
+        <div class="panels certificates">
+        <h2 class="title ">Certificates/Webinars Attended</h2>
         <div class="fade_up">
-            <p>AWS, How to set up.&nbsp;&nbsp; -&nbsp;&nbsp;  by, Michael S. Lacanilao&nbsp; (April 2, 2022)</p>
+            <!-- <a href="#">Certificate of Recognition.&nbsp;&nbsp; -&nbsp;&nbsp; 4th Year Research Colloquim 2022 &nbsp; (April 2, 2022)</a> -->
+            <a href="files/E-Pangasiwa-recognition and certification.pdf">Certificate of Recognition  & Participation.&nbsp;&nbsp;-&nbsp;&nbsp;4th Year Research Colloquim 2022 &nbsp; (April 2, 2022)</a>
+        
         </div>
         <div class="fade_up">
-            <p>Certificate of Recognition.&nbsp;&nbsp; -&nbsp;&nbsp; 4th Year Research Colloquim 2022 &nbsp; (April 2, 2022)</p>
+            <!-- <a href="#">Certificate of Recognition & Participation on: AWS, How to set up.&nbsp;&nbsp; -&nbsp;&nbsp; by, Michael S.
+                Lacanilao&nbsp; (April 5, 2022)</a> -->
+            <a href="files/webinar certificate 1.pdf">Certificate of Participation&nbsp;&nbsp;-&nbsp;&nbsp;AWS, How to set up. By, Simeon Aeron Victorino&nbsp; (April 5, 2022)</a>
+            
+        </div>
+        <div class="fade_up">
+            <!-- <a href="#">Certificate of Participation on: IT Jobs: career options, titles and descriptions.&nbsp;&nbsp; -&nbsp;&nbsp; by,
+                Michael S. Lacanilao&nbsp; (May 20, 2022)</a> -->
+            <a href="files/webinar certificate 2.pdf">Certificate of Participation&nbsp;&nbsp;-&nbsp;&nbsp;IT Jobs: Career Options, Titles and Descriptions.  (May 20, 2022)</a>
+            
+        </div>
+        <div class="fade_up">
+            <!-- <a href="#">Certificate of Participation on: IT Jobs: career options, titles and descriptions.&nbsp;&nbsp; -&nbsp;&nbsp; Lucy
+               0 Quiambao Lagman&nbsp; (May 31, 2022)</a> -->
+        
+            <a href="files/webinar certificate 3.pdf">Certificate of Participation&nbsp;&nbsp;-&nbsp;&nbsp;Blending Web Technologies in Business Using the Right Tools. By, Jayson R. Alfonso. &nbsp; (May 30, 2022)</a>
         </div>
         
         <div class="fade_up">
-         <p>4th year college, 2nd Semester Dean's Lister&nbsp; (April 2, 2022)</p>
+            <!-- <a href="#">Certificate of Participation on: IT Jobs: career options, titles and descriptions.&nbsp;&nbsp; -&nbsp;&nbsp; Lucy
+               0 Quiambao Lagman&nbsp; (May 31, 2022)</a> -->
+        
+            <a href="files/webinar certificate 4.pdf">Certificate of Participation&nbsp;&nbsp;-&nbsp;&nbsp;The Power of Being Yourself: Journey to a Succesful IT Career. &nbsp; (May 30, 2022)</a>
         </div>
         <div class="fade_up">
-            <p>4th year college, 1st Semester Dean's Lister&nbsp; (April 2, 2022)</p>
+        <!-- <a href="#">A consistent College Dean's Lister&nbsp; (June 2018 - August 2022)</a> -->
+        <a href="#">College Dean's Lister&nbsp; (June 2018 - August 2022)</a>
         </div>
-        <div class="fade_up">
-            <p>3rd year college, 2nd Semester Dean's Lister&nbsp; (April 2, 2021)</p>
-        </div>
-        <div class="fade_up">
-            <p>3rd year college, 1st Semester Dean's Lister&nbsp; (April 2, 2021)</p>
-        </div>
+        
     </div>
-    <div class="panels animate skills" id="">
+    <div class="panels  skills" id="">
         <div>
             <h2 class="title">Skills and Technologies </h2>
             <p>
             HTML5, CSS3, JavaScript ES6,
             <br>
-            Wordpress, PHP, MySql, Phython
+            Wordpress, PHP, MySql, Python
             </p> 
         </div>
         <div class = "logo_container">
             <img src="https://www.freepnglogos.com/uploads/html5-logo-png/html5-logo-html-logo-0.png" alt="html5 logo, html logo" class="fade_up" />
             <img src="https://www.redslash.eu/images/web/css3-logo.png" alt="html5 logo, html logo" class="fade_up"/>
             <img src="https://cdn.freebiesupply.com/logos/large/2x/python-5-logo-png-transparent.png" alt="" class="fade_up">
-            <img src="https://cdn.freebiesupply.com/logos/large/2x/php-1-logo-png-transparent.png" alt="html5 logo, html logo" class="fade_up"/>
-           
+            <img src="https://cdn.freebiesupply.com/logos/large/2x/php-1-logo-png-transparent.png" alt="html5 logo, html logo"
+                class="fade_up" />
             <img src="https://www.britefish.net/wp-content/uploads/2019/06/logo-javascript-2.png" alt="html5 logo, html logo" class="fade_up"/>
             <img src="https://www.pngall.com/wp-content/uploads/2016/05/WordPress-Logo-Free-PNG-Image.png" alt="html5 logo, html logo" class="fade_up"/>
             <img src="https://cdn.freebiesupply.com/logos/large/2x/mysql-logo-png-transparent.png" alt="html5 logo, html logo" class="fade_up"/>
             
         </div>           
     </div>
-    <div class="panels animate end_statement" id="contact_me">
+    <div class="panels  end_statement" id="contact_me">
         <p>Always looking for someone to talk to.</p>
         <h1 class="title">it.michealjohn.a.david@gmail.com</h1>
     </div>
@@ -133,4 +213,5 @@
     <div></div>
 <script src="main_js.js"></script>
 </footer>
+</html>
 
