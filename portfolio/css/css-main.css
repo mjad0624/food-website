@@ -179,7 +179,6 @@ font-size: 3em;
     display: grid;
     grid-template-rows: 1fr 3fr;
     color: #fff;
-    
 }
 
 
@@ -187,7 +186,7 @@ font-size: 3em;
     direction: rtl;
 }
 
-.project_container:nth-child(odd) a::before{
+.project_container:nth-child(odd) a::before{ /*effects on inverted  container*/
     right: 52%
 }
 
