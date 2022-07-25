@@ -34,7 +34,6 @@ body p{
 
 body a{
     font-weight: 400;
-    font-size: 3em;
     text-decoration: none;
     color: var(--text);
     position: relative;
@@ -63,13 +62,7 @@ a::before{
     margin-bottom: 20rem;
 }
 
-figure{
-    overflow: hidden;
-    height: inherit;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
+
 img{
     position: relative;
     height: inherit;
@@ -82,6 +75,32 @@ img{
 img:hover{
 transform: scale(1.1);
 cursor: pointer;
+}
+
+button{
+    position: absolute;
+    border: 0;
+    border-radius: 50%;
+    background-color: #000;
+    font-weight: bold;
+    opacity: 0.5;
+    transition: opacity 0.5s;
+    height: 50px;
+    width: 50px;
+    font-size:40px;
+    z-index: 1;
+    color: #fff;
+}
+
+.btn_prev{
+    left: 5%;
+}
+
+.btn_next{
+    right: 5%;
+}
+button:hover{
+    opacity: 1;
 }
 
 
@@ -102,6 +121,7 @@ cursor: pointer;
 
 .nav_container a{
     color: inherit;
+    font-size: 3em;
 }
 
 
@@ -155,7 +175,7 @@ cursor: pointer;
 .project_container{
     width: 100%;
     font-size: 8px;
-    margin-bottom: 20%;
+    margin-bottom: 15%;
 
 }
 .project_container h1{
@@ -166,7 +186,7 @@ font-size: 3em;
     
 }
 
-.project_container:nth-child(even) .project_img{
+/* .project_container:nth-child(even) .project_img{
     background-color: #a8ecf9;
     display: grid;
     grid-template-rows: 1fr 3fr;
@@ -180,18 +200,41 @@ font-size: 3em;
     grid-template-rows: 1fr 3fr;
     color: #fff;
 }
+ */
 
-
-.project_container:nth-child(odd){
+/* .project_container:nth-child(odd){
     direction: rtl;
-}
+} */
 
-.project_container:nth-child(odd) a::before{ /*effects on inverted  container*/
-    right: 52%
+
+.project_img{
+    text-align: center;
+    align-items: center;
+    height: 90%;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    position: relative;    
+
 }
 
 .project_img img{
     transition: ease 2s ;
+}
+
+figure{
+    /* overflow: hidden; */
+    height: inherit;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    transition: transform 1s;
+    transform: translateX(0) ;
+    display: flex;
+}
+
+figure img{
+    flex-shrink: 0;
 }
 .project_description{
     text-align: center;
@@ -210,6 +253,7 @@ font-size: 3em;
 margin: 10em 0;
 position: relative;
 line-height: 2em;
+font-size: 3em;
 }
 
 

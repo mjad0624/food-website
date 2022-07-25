@@ -95,24 +95,24 @@
     });
 
 /********************************FADE-UP WITH NO DELAY**************************/
-let style_simul_fade = "fade";       //css class styling
-let timer_simul_fade = 100;
-let intersectionObserver_simul_fade = new IntersectionObserver(entries =>{
-    entries.forEach(entry =>{
-        if(entry.isIntersecting){
-            setTimeout(function() {entry.target.classList.add(style_simul_fade)},timer_simul_fade);
-            intersectionObserver_simul_fade.unobserve(entry.target);
-        }
+// let style_simul_fade = "fade";       //css class styling
+// let timer_simul_fade = 100;
+// let intersectionObserver_simul_fade = new IntersectionObserver(entries =>{
+//     entries.forEach(entry =>{
+//         if(entry.isIntersecting){
+//             setTimeout(function() {entry.target.classList.add(style_simul_fade)},timer_simul_fade);
+//             intersectionObserver_simul_fade.unobserve(entry.target);
+//         }
 
-    })
+//     })
     
-},options = {
-    threshold: 0.8
-}); 
+// },options = {
+//     threshold: 0.8
+// }); 
 
-document.querySelectorAll('.simul_fade').forEach(obj => {
-    intersectionObserver_simul_fade.observe(obj); 
-});
+// document.querySelectorAll('.simul_fade').forEach(obj => {
+//     intersectionObserver_simul_fade.observe(obj); 
+// });
         
     /*********************  NAV BAR OBSERVER **********************/
 
@@ -127,4 +127,82 @@ document.querySelectorAll('.simul_fade').forEach(obj => {
 
 };
 
-/****************************** Image Slider ********************************/
+/****************************** Image Slider no 1********************************/
+const btn_prev1 = document.querySelector('.btn_prev1');
+const btn_next1 = document.querySelector('.btn_next1');
+const carousel_images1 = document.querySelectorAll('.figure_1 img');
+const image_size = document.querySelector('.figure_1').offsetWidth; 
+var counter = 0;
+document.querySelector('.figure_1').style = 'transform: translateX('+counter*(-700)+'px);';
+
+
+btn_next1.addEventListener('click', () =>
+{
+
+    if (carousel_images1[counter].getAttribute('id') == "food_website_4" )
+    {
+        counter = 0;
+        // container.style = "transition:transform 0s;";
+        document.querySelector('.figure_1').style = 'transform: translateX(' + (-counter) * image_size + 'px);';
+    } else
+    {
+        counter++;
+        document.querySelector('.figure_1').style = 'transform: translateX(' + (-counter) * image_size + 'px);';        
+    }
+
+});
+ 
+btn_prev1.addEventListener('click',()=>{
+    
+    
+    if (carousel_images1[counter].getAttribute('id') == "food_website_1" )
+    {
+        counter = 3;
+        // container.style = "transition:transform 0s;";
+        document.querySelector('.figure_1').style = 'transform: translateX(' + (-counter) * image_size + 'px);';
+    } else
+    {
+        counter--;
+        document.querySelector('.figure_1').style = 'transform: translateX(' + (-counter) * image_size + 'px);';        
+    }
+});
+   
+/****************************** Image Slider no 2 ********************************/
+const btn_prev2 = document.querySelector('.btn_prev2');
+const btn_next2 = document.querySelector('.btn_next2');
+const carousel_images2 = document.querySelectorAll('.figure_2 img');
+const image_size2 = document.querySelector('.figure_2').offsetWidth; 
+var counter2 = 0;
+document.querySelector('.figure_1').style = 'transform: translateX('+counter2*(image_size2)+'px);';
+
+
+btn_next2.addEventListener('click', () =>
+{
+
+    if (carousel_images2[counter2].getAttribute('id') == "system_4" )
+    {
+        counter2 = 0;
+        // container.style = "transition:transform 0s;";
+        document.querySelector('.figure_2').style = 'transform: translateX(' + (-counter2) * image_size2 + 'px);';
+    } else
+    {
+        counter2++;
+        document.querySelector('.figure_2').style = 'transform: translateX(' + (-counter2) * image_size2 + 'px);';        
+    }
+
+});
+ 
+btn_prev2.addEventListener('click',()=>{
+    
+    
+    if (carousel_images2[counter2].getAttribute('id') == "system_1" )
+    {
+        counter2 = 3;
+        // container.style = "transition:transform 0s;";
+        document.querySelector('.figure_2').style = 'transform: translateX(' + (-counter2) * image_size2 + 'px);';
+    } else
+    {
+        counter2--;
+        document.querySelector('.figure_2').style = 'transform: translateX(' + (-counter2) * image_size2 + 'px);';        
+    }
+   });
